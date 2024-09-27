@@ -1,3 +1,3 @@
 Works the best with Roformer models<br><br>
-Mirror:<br>
+Model/confing mirror:<br>
 https://ufile.io/09560o34
