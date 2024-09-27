@@ -1,0 +1,41 @@
+audio:
+  chunk_size: 132300 #132300
+  num_channels: 2
+  sample_rate: 44100
+  min_mean_abs: 0.0
+
+model:
+  sr: 44100
+  win: 20
+  feature_dim: 256
+  layer: 6
+
+training:
+  instruments: ['restored', 'addition']
+  target_instrument: 'restored'
+  batch_size: 1
+  gradient_accumulation_steps: 2
+  num_steps: 1000
+  num_epochs: 1000
+  optimizer: 'prodigy'
+  lr:  1.0
+  patience: 2
+  reduce_factor: 0.95
+  coarse_loss_clip: true
+  grad_clip: 0
+  q: 0.95
+  use_amp: false
+
+optimizer:
+  weight_decay: 0.01
+  betas: [0.5, 0.99]
+
+augmentations:
+  enable: true # enable or disable all augmentations (to fast disable if needed)
+  loudness: true # randomly change loudness of each stem on the range (loudness_min; loudness_max)
+  loudness_min: 0.5
+  loudness_max: 1.5
+
+inference:
+  batch_size: 4
+  num_overlap: 4
