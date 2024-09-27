@@ -2,4 +2,4 @@ Works the best with Roformer models<br><br>
 Model/confing mirror:<br>
 https://ufile.io/09560o34
 
-Sketchy jarredou's fork.
+Sketchy jarredou's Colab fork.
