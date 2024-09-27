@@ -45,7 +45,7 @@ def main(input_wav, output_wav):
     os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
     global model
-    model = look2hear.models.BaseModel.from_pretrain("/content/Apollo/model/pytorch_model.bin", sr=44100, win=20, feature_dim=256, layer=6).cuda()
+    model = look2hear.models.BaseModel.from_pretrain("/content/Apollo/model/apollo_model.ckpt", sr=44100, win=20, feature_dim=256, layer=6).cuda()
 
     test_data, samplerate = load_audio(input_wav)
     
